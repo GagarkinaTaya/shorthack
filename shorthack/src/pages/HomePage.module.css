@@ -1,0 +1,82 @@
+.container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 40px;
+    color: black; /* Черный цвет для заголовка */
+    font-size: 2.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+        "internships internships rating events"
+        "internships internships merch merch";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+    min-height: 500px;
+}
+
+.card:nth-child(1) {
+    grid-area: internships;
+    background: #FF4FA3; /* Яркий розовый для Стажировок */
+}
+
+.card:nth-child(2) {
+    grid-area: rating;
+}
+
+.card:nth-child(3) {
+    grid-area: events;
+}
+
+.card:nth-child(4) {
+    grid-area: merch;
+    background: #FFB6D9; /* Светло-розовый для МЕРЧ */
+}
+
+.card {
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(255, 79, 163, 0.2);
+}
+
+/* Весь текст в карточках черный */
+.card h2,
+.card p {
+    color: black;
+}
+
+.registerButton {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.registerButton:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
